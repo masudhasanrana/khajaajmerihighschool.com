@@ -1,0 +1,192 @@
+/*=========Achievement section start*/
+
+.about__achievement{
+    padding: 5rem;
+    margin: 8rem 0;
+}
+
+
+.about__achievement__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+    justify-content: center;
+
+}
+.about__achievement__left{
+    display: block;
+    margin: auto;
+}
+.about__achievement__right > p{
+    margin: 1.6rem 0 2.7rem;
+
+}
+.achievement__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+
+}
+.achievement__card{
+    background: var(--color-bg1);
+    padding: 1.5rem 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.achievement__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,.3);
+}
+.achievement__icon{
+    background: var(--color-danger);
+    padding: .6rem .9rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
+.achievement__card:nth-child(2) .achievement__icon{
+    background: var(--color-success);
+}
+
+.achievement__card:nth-child(3) .achievement__icon{
+    background: var(--color-warning);
+}
+.achievement__card p{
+    margin-top: 1rem;
+}
+
+/*==================Teacher Section=================*/
+
+.teacher{
+    background: var(--color-bg1);
+    box-shadow: inset 0 1rem 5rem rgba(0,0,0,0.5);
+}
+.teacher__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.teacher__member{
+    position: relative;
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    overflow: hidden;
+}
+.teacher__member:hover{
+    background: transparent;
+    border: 1px solid var(--color-bg2);
+}
+.teacher__member img{
+    height: 15rem;
+    width: cover;
+    filter: saturate(0);
+
+}
+.teacher__member:hover img{
+    filter: saturate(1);
+}
+.teacher__member__info *{
+    text-align: center;
+    margin-top: 1.3rem;
+}
+.teacher__member__info p{
+    color: var(--color-light);
+}
+
+.teacher__member__social{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    transform: translateY(-50%);
+    box-shadow: -2rem 0 2rem rgba(0,0,0,.3);
+    transition: var(--transition);
+    overflow: hidden;
+}
+.teacher__member:hover .teacher__member__social{
+    right: 0;
+}
+
+.teacher__member__social a{
+    padding: .8rem;
+}
+.teacher__member__social a:hover{
+    background: var(--color-danger);
+}
+
+
+
+/*==================media quary for Tablet========================*/
+
+@media screen and (max-width: 1024px) {
+  
+
+.about__achievement{
+    margin-top: 2rem;
+}
+.about__achievement__container{
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+}
+.about__achievement__right > p{
+    margin: 1rem 0 1.6rem;
+
+}
+.about__achievement__left
+{
+    width: 80%;
+    margin: 0 auto;
+}
+.teacher__container{
+    grid-template-columns: 1fr 1fr ;
+}
+.achievement__cards{
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+
+/*==================media quary for Phone========================*/
+
+
+@media screen and (max-width: 600px) {
+    .about__achievement{
+        margin-top: 6rem;
+        padding: .7rem;
+        text-align: center;
+    }
+    .about__achievement__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .about__achievement__left
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .teacher__container{
+        grid-template-columns: 1fr ;
+    }
+    .achievement__cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .about__achievement__right > p{
+        margin: 2rem 0;
+    
+    }
+
+
+
+
+
+
+
+}
